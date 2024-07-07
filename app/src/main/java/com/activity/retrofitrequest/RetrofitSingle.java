@@ -10,7 +10,7 @@ public class RetrofitSingle {
     public static Retrofit getRetrofit(String baseUrl){
         if(retrofit == null){
             retrofit = new Retrofit.Builder().
-                    baseUrl("https://api.agify.io/")
+                    baseUrl(baseUrl)
                     .addConverterFactory(GsonConverterFactory.create())
                     .build();
         }
